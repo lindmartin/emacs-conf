@@ -35,3 +35,7 @@
 (dolist (p custom-elpa-packages) ;; Install each package in 
   (when (not (package-installed-p p))
     (package-install p)))
+
+;;; Load themes
+(add-to-list 'load-path "~/.emacs.d/themes")
+(load "ui.el")
