@@ -11,10 +11,6 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;;; Remove the toolbar in window mode
-(if window-system
-    (tool-bar-mode 0))
-
 (setq inhibit-startup-screen t)
 
 ;;; Enable option character on os x
@@ -37,5 +33,8 @@
     (package-install p)))
 
 ;;; Load themes
-(add-to-list 'load-path "~/.emacs.d/themes")
-(load "ui.el")
+(if window-system
+    (progn
+      (add-to-list 'load-path "~/.emacs.d/themes")
+      (load "ui.el")))
+
