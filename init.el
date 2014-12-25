@@ -38,3 +38,6 @@
       (add-to-list 'load-path "~/.emacs.d/themes")
       (load "ui.el")))
 
+;;; Load configuration for plugins
+(add-to-list 'load-path "~/.emacs.d/plugins")
+(load "setup-mc.el")
