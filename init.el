@@ -34,6 +34,9 @@
 (defvar custom-elpa-packages
   '(;; Multiple cursors
     multiple-cursors
+
+    ;; Package for handling S-expressions easier
+    paredit
     
     ;; Packages for clojure mode and REPL
     clojure-mode
@@ -52,3 +55,9 @@
 ;;; Load configuration for plugins
 (add-to-list 'load-path "~/.emacs.d/plugins")
 (load "setup-mc.el")
+
+;;; Load configuration files for languages
+(add-to-list 'load-path "~/.emacs.d/languages")
+(load "setup-clojure.el")
+(load "setup-erlang.el")
+(load "setup-common-lisp.el")
