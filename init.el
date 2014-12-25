@@ -11,7 +11,18 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
+;;; Defaults
+
+;;; Remove startup screen
 (setq inhibit-startup-screen t)
+
+;;; Save backup files in .emacs.d
+(setq backup-by-copying t
+      backup-directory-alist '(("." . "~/.emacs.d/saves"))
+      delete-old-versions t
+      kept-new-versions 6
+      kept-old-versions 2
+      version-control t)
 
 ;;; Enable option character on os x
 (if (eq system-type 'darwin)
