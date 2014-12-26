@@ -1,5 +1,6 @@
 # Ignore emacs auto created files.
 /auto-save-list
+/saves
 /games
 
 # Ignore elpa files
