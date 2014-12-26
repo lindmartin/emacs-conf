@@ -4,8 +4,10 @@
 (add-to-list 'exec-path "/usr/local/bin")
 
 ;;; Setup path to SLIME
+(setq use-quicklisp-slime t)
+(setq quicklisp-root-dir "~/quicklisp")
 (setq slime-root-dir "~/slime")
 
 ;;; Setup path to erlang and emacs tools for erlang
 (setq erlang-root-dir "/usr/local/lib/erlang")
-(setq erlang-tools-version "2.7.1")
+(setq erlang-tools-version "2.6.13")
