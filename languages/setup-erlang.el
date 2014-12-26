@@ -1,5 +1,6 @@
 ;;; Setup emacs-tools for erlang.
-(setq load-path (cons "/usr/local/lib/erlang/lib/tools-2.7/emacs" load-path))
-(setq erlang-root-dir "/usr/local/lib/erlang")
-(setq exec-path (cons "/usr/local/lib/erlang/bin" exec-path))
+(add-to-list 'load-path
+	     (concat erlang-root-dir "/lib/tools-"
+		     (chomp erlang-tools-version) "/emacs"))
+(add-to-list 'exec-path (concat erlang-root-dir "/bin"))
 (require 'erlang-start)

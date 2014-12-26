@@ -11,6 +11,11 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
+;;; Custom functions and local machine configuraiton
+(add-to-list 'load-path "~/.emacs.d/customization")
+(load "functions.el")
+(load "local.el")
+
 ;;; Defaults
 
 ;;; Remove startup screen
