@@ -40,6 +40,12 @@
   '(;; Multiple cursors
     multiple-cursors
 
+    ;; Better TeX mode
+    auctex
+
+    ;; Solarized theme
+    solarized-theme
+
     ;; Package for handling S-expressions easier
     paredit
     
