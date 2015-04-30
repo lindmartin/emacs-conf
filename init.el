@@ -72,3 +72,5 @@
 (load "setup-clojure.el")
 (load "setup-erlang.el")
 (load "setup-common-lisp.el")
+(load "setup-latex.el")
+
