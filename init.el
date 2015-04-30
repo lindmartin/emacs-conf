@@ -57,6 +57,9 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
+;;; Load libraries not in ELPA
+(add-to-list 'load-path "~/.emacs.d/libraries")
+
 ;;; Load themes
 (if window-system
     (progn
@@ -66,6 +69,7 @@
 ;;; Load configuration for plugins
 (add-to-list 'load-path "~/.emacs.d/plugins")
 (load "setup-mc.el")
+(load "setup-column-marker.el")
 
 ;;; Load configuration files for languages
 (add-to-list 'load-path "~/.emacs.d/languages")
