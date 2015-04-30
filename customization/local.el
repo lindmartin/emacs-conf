@@ -11,3 +11,6 @@
 ;;; Setup path to erlang and emacs tools for erlang
 (setq erlang-root-dir "/usr/local/lib/erlang")
 (setq erlang-tools-version "2.6.13")
+
+;;; Setup ispell compliant program
+(setq-default ispell-program-name "aspell")
