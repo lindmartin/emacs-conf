@@ -1,10 +1,10 @@
 ;;; Setup MELPA repository
 (require 'package)
 (add-to-list 'package-archives
-	     '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (when (< emacs-major-version 24)
   (add-to-list 'package-archives
-	       '("gnu" . "http://elpa.gnu.org/packages/")))
+               '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize)
 
 ;;; Update ELPA archives, if needed.
@@ -32,8 +32,8 @@
 ;;; Enable option character on os x
 (if (eq system-type 'darwin)
     (setq mac-option-modifier nil
-	  mac-command-modifier 'meta
-	  x-select-enable-clipboard t))
+          mac-command-modifier 'meta
+          x-select-enable-clipboard t))
 
 ;;; Install package from MELPA
 (defvar custom-elpa-packages
@@ -48,9 +48,14 @@
 
     ;; Package for handling S-expressions easier
     paredit
-    
-    ;; Packages for clojure mode and REPL
+
+    ;; Extra file editing modes
+    haskell-mode
     clojure-mode
+    dockerfile-mode
+    scala-mode2
+    
+    ;; S-Expression submode
     cider))
 
 (dolist (p custom-elpa-packages) ;; Install each package in 
@@ -73,8 +78,11 @@
 
 ;;; Load configuration files for languages
 (add-to-list 'load-path "~/.emacs.d/languages")
-(load "setup-clojure.el")
-(load "setup-erlang.el")
-(load "setup-common-lisp.el")
+;(load "setup-erlang.el")
+(load "setup-haskell.el")
+;(load "setup-clojure.el")
+;(load "setup-common-lisp.el")
 (load "setup-latex.el")
 
+;;; Load configuraiton file to customize editor
+(load "editor.el")
