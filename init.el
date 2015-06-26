@@ -40,8 +40,9 @@
   '(;; Multiple cursors
     multiple-cursors
 
-    ;; Better TeX mode
+    ;; Better TeX mode and Text tools
     auctex
+    markdown-mode
 
     ;; Solarized theme
     solarized-theme
@@ -80,6 +81,7 @@
 (add-to-list 'load-path "~/.emacs.d/languages")
 ;(load "setup-erlang.el")
 (load "setup-haskell.el")
+(load "setup-javascript.el")
 ;(load "setup-clojure.el")
 ;(load "setup-common-lisp.el")
 (load "setup-latex.el")
