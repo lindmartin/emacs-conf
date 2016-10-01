@@ -5,12 +5,12 @@
 
 ;;; Setup path to SLIME
 (setq use-quicklisp-slime t)
-(setq quicklisp-root-dir "~/quicklisp")
-(setq slime-root-dir "~/slime")
+(setq quicklisp-root-dir "~/dev/quicklisp")
+(setq slime-root-dir "~/dev/slime")
 
 ;;; Setup path to erlang and emacs tools for erlang
-(setq erlang-root-dir "/usr/local/lib/erlang")
-(setq erlang-tools-version "2.6.13")
+;(setq erlang-root-dir "/usr/local/lib/erlang")
+;(setq erlang-tools-version "2.6.13")
 
 ;;; Setup ispell compliant program
 (setq-default ispell-program-name "aspell")

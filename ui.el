@@ -8,7 +8,7 @@
 
 ;;; Load theme
 ;(load "bliss-theme.el")
-;(load "darcula-theme.el")
 ;(load "radiance-theme.el")
 ;(load "smyx-theme.el")
-(load "solarized-light-theme.el")
+;(load "solarized-light-theme.el")
+(load-theme 'dracula t)

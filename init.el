@@ -44,9 +44,10 @@
     auctex
     markdown-mode
 
-    ;; Solarized theme
+    ;; Themes
     solarized-theme
-
+    dracula-theme
+    
     ;; Package for handling S-expressions easier
     paredit
 
@@ -54,7 +55,7 @@
     haskell-mode
     clojure-mode
     dockerfile-mode
-    scala-mode2
+    scala-mode
     
     ;; S-Expression submode
     cider))
@@ -69,22 +70,36 @@
 ;;; Load themes
 (if window-system
     (progn
-      (add-to-list 'load-path "~/.emacs.d/themes")
+      (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
       (load "ui.el")))
 
 ;;; Load configuration for plugins
 (add-to-list 'load-path "~/.emacs.d/plugins")
-(load "setup-mc.el")
-(load "setup-column-marker.el")
+;(load "setup-mc.el")
+;(load "setup-column-marker.el")
 
 ;;; Load configuration files for languages
 (add-to-list 'load-path "~/.emacs.d/languages")
 ;(load "setup-erlang.el")
-(load "setup-haskell.el")
-(load "setup-javascript.el")
+;(load "setup-haskell.el")
+;(load "setup-javascript.el")
 ;(load "setup-clojure.el")
-;(load "setup-common-lisp.el")
+(load "setup-common-lisp.el")
 (load "setup-latex.el")
 
 ;;; Load configuraiton file to customize editor
 (load "editor.el")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (dracula-theme solarized-theme scala-mode paredit multiple-cursors markdown-mode haskell-mode dockerfile-mode cider auctex))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
