@@ -3,6 +3,9 @@
 ;;; Remove the toolbar
 (tool-bar-mode 0)
 
+;;; Remove scroolbars
+(scroll-bar-mode -1)
+
 ;;; Line numbers
 (global-linum-mode t)
 
@@ -11,4 +14,4 @@
 ;(load "radiance-theme.el")
 ;(load "smyx-theme.el")
 ;(load "solarized-light-theme.el")
-(load-theme 'dracula t)
+(load-theme 'base16-greenscreen t)
