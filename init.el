@@ -16,6 +16,10 @@
 (load "functions.el")
 (load "local.el")
 
+;;; Load "custom-set-variable" in custom files
+(setq custom-file "~/.emacs.d/customization/custom.el")
+(load custom-file)
+
 ;;; Defaults
 
 ;;; Remove startup screen
@@ -79,10 +83,9 @@
 ;(load "setup-erlang.el")
 ;(load "setup-haskell.el")
 ;(load "setup-javascript.el")
-;(load "setup-clojure.el")
+(load "setup-clojure.el")
 (load "setup-common-lisp.el")
 (load "setup-latex.el")
 
 ;;; Load configuraiton file to customize editor
 (load "editor.el")
-
