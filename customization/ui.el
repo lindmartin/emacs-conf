@@ -14,4 +14,6 @@
 ;(load "radiance-theme.el")
 ;(load "smyx-theme.el")
 ;(load "solarized-light-theme.el")
-(load-theme 'base16-greenscreen t)
+;;(load-theme 'base16-greenscreen t)
+(load-theme 'github)
+
